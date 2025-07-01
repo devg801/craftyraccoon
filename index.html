@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crafty Racoon Crafts</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Crafty Racoon Crafts</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h2>Creating Stunning Visuals and Displays</h2>
+    </section>
+
+    <br>
+    <section id="about" class="about">
+        <h2>About</h2>
+        <img class="about img" src="./img/artist1.jpg" alt="Brooke, the artist">
+        <p>Hi, I’m Brooke! Art has always been my passion, and I love bringing creativity to life in unique and meaningful ways. Whether it’s window painting, sign art, or murals, I take pride in transforming everyday spaces into something vibrant and unforgettable. Recently, I’ve also started my journey as a tattoo apprentice, and I’m excited to explore how my art can tell personal stories and leave a lasting mark. For me, it’s all about connecting with people through my work and creating something that truly resonates.</p>
+        <br>
+    </section>
+    <br>
+<section id="partners-projects" class="partners-projects" >
+    <h3>Previous Projects</h3>
+    <ul style="list-style-type: none; padding: 0; margin-top: 10px; color: #333;">
+        <li style="margin-bottom: 10px;">🎨 Local Mural</li>
+        <li style="margin-bottom: 10px;">🎨 Community Chalk Art Festival</li>
+        <li style="margin-bottom: 10px;">🎨 Seasonal Window Art for Retail Stores</li>
+        <li style="margin-bottom: 10px;">🎨 Custom Logo Designs</li>
+    </ul>
+</section>
+    <br>
+    <br>
+    <section id="gallery" class="gallery">
+        <div class="image-viewer">
+            <img id="currentImage" src="https://via.placeholder.com/600" alt="Current Artwork">
+            <div class="controls">
+                <button id="prevButton">Previous</button>
+                <button id="nextButton">Next</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        const images = [
+            "./img/gandalf2_chalk.jpg",
+            "./img/cat_chalk.jpg",
+            "./img/cat_chalk2.jpg",
+            "./img/kayenta1_chalk.jpg",
+            "./img/miles2_window.jpg",
+            "./img/charizard_window.jpg",
+            "./img/mercury_sign.jpg",
+            "./img/fall_sign.jpg",
+            "./img/doe_sign.jpg",
+            "./img/folkbird_tat.jpg",
+            "./img/folktat.jpg",
+            "./img/croc_oran_tat.jpg",
+            "./img/nu_sch_tat.jpg",
+            "./img/serp_tat.jpg",
+            "./img/black_tat.jpg",
+            "./img/fish_mural.jpg",
+            "./img/cact_mural1.jpg",
+            "./img/cact_mural2.jpg",
+            "./img/harmon_mural.jpg",
+        ];
+    
+        let currentIndex = 0;
+        const currentImage = document.getElementById('currentImage');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+    
+        function updateImage(index) {
+            const previousHeight = currentImage.offsetHeight;
+            currentImage.style.height = previousHeight + 'px'; // lock height to prevent scroll jump
+            currentImage.src = images[index];
+            currentImage.alt = `Artwork ${index + 1}`;
+            
+            currentImage.onload = () => {
+                currentImage.style.height = '400px'; // enforce consistent image height
+            };
+        }
+        
+    
+        function showNextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateImage(currentIndex);
+        }
+    
+        function showPrevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateImage(currentIndex);
+        }
+    
+        nextButton.addEventListener('click', showNextImage);
+        prevButton.addEventListener('click', showPrevImage);
+    
+        // Auto change image every 30 seconds
+        setInterval(showNextImage, 30000);
+    
+        // Initialize gallery
+        updateImage(currentIndex);
+        
+    </script>
+    
+    
+        </div>
+    </section>
+    
+    <br>
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to collaborate or inquire about the artwork, please contact through social media or email at <a href="mailto:bekeithley@gmail.com">bekeithley@gmail.com</a>.</p>
+        <pre><p><a href="https://www.instagram.com/craftyraccooncrafts/"><img src="./img/ig.png" width="40px" height="40px"></a> <a href="https://www.facebook.com/profile.php?id=61566607036055"><img src="./img/fb.png" width="40px" height="40px"></a></p></pre>
+        <br>
+        
+    </section>
+    <br>
+    <footer>
+        <p>&copy; 2025 Crafty Racoon Crafts. Design with passion.</p>
+        <br>
+        <p style="font-size: 10px">Site made by RuneGraveStudios</p>
+    </footer>
+</body>
+</html>
