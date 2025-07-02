@@ -143,6 +143,11 @@ section {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
+.gallery h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
 
 .image-viewer {
     position: relative;
