@@ -7,9 +7,15 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
+    background-color: #dee0e060;
     color: #333333;
     overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    margin: 0;
+    padding-top: 22px;
 }
 
 /* Header */
@@ -18,7 +24,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    /*background: rgba(255, 255, 255, 0.95);*/
+    background: rgba(12, 255, 255, 0.103);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -38,6 +45,7 @@ header h1 {
 nav {
     display: flex;
     gap: 20px;
+    font-size: large;
 }
 
 nav a {
@@ -81,7 +89,8 @@ section {
 .about {
     max-width: 900px;
     margin: 0 auto;
-    background-color: rgba(42, 153, 42, 0.1);
+    /*background-color: rgba(42, 153, 42, 0.1);*/
+    background: rgba(12, 255, 255, 0.103);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     text-align: center;
@@ -115,7 +124,8 @@ section {
 .partners-projects {
     max-width: 900px;
     margin: 0 auto;
-    background-color: rgba(127, 255, 212, 0.15);
+    /*background-color: rgba(127, 255, 212, 0.15);*/
+    background: rgba(12, 255, 255, 0.103);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
@@ -137,7 +147,8 @@ section {
 .gallery {
     max-width: 800px;
     margin: 0 auto;
-    background-color: rgba(127, 255, 212, 0.1);
+    /*background-color: rgba(127, 255, 212, 0.1);*/
+    background: rgba(12, 255, 255, 0.103);
     padding: 40px 20px;
     border-radius: 10px;
     text-align: center;
