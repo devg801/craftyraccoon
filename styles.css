@@ -62,7 +62,8 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('./img/lilypad1_en.jpg') center/cover no-repeat;
+    background: url('./img/mural1.png') center/cover no-repeat;
+    background-position: center top;
     padding: 120px 20px 100px;
     text-align: center;
     display: flex;
